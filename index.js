@@ -1,17 +1,17 @@
 var Discord = require('discord.io');
-var winston = require('winston');
+var logger = require('winston');
 var auth = require('./auth.json');
 var fetch = require("node-fetch");
 
-var logger = winston.createLogger({
-    level:'debug',
-    format: winston.format.json(),
-    transports:[]
-})
+// var logger = winston.createLogger({
+//     level:'debug',
+//     format: winston.format.json(),
+//     transports:[]
+// })
 
-logger.add(new winston.transports.Console(), {
-    colorize: true
-})
+// logger.add(new winston.transports.Console(), {
+//     colorize: true
+// })
 // // Create a request variable and assign a new XMLHttpRequest object to it.
 // var request = new XMLHttpRequest()
 
