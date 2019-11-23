@@ -115,8 +115,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     })
                     .then(data => {
                         // Work with JSON data here
-                        console.log("Level:"+ data["summonerLevel"])
-                        console.log(data)
+                        // console.log(data)
                         var summonerId = data["id"];
                         console.log("summoner ID:"+ data["id"])
                         newURL = 'https://na1.api.riotgames.com/tft/league/v1/entries/by-summoner/'+summonerId+'?api_key=RGAPI-77b83688-c7d7-451e-b4df-5667e8b88bb3'
@@ -127,7 +126,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                             })    
                             .then(data => {
                                 console.log(data);
-                                console.log("TEST: "+(data.length))
                                 if (data.length === 0) {
                                     bot.sendMessage({
                                     to: channelID,
@@ -149,7 +147,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                                         })
                                     }
                                 }
-
                             })
                             .catch(err => {
                                 // Do something for an error here
